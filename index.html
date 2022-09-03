@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body onload="DefaultScreen()">
+
+    <!-- ======LEFT 1======= -->
+    <div class="left-main">
+        <div class="nav-left">
+            <div class="tapSearch">Search for Places</div>
+            <i  class="fa-solid fa-location-crosshairs"></i>
+        </div>
+        <div class="img1-left">
+            <img class="bgImg" src="Material/Cloud-background.png" alt="">
+            <img class="mainImg"  alt="">
+        </div>
+        <div class="temp-left">
+            <h2 class="cel-left"><span id="leftTemp"></span>  ৹C</h2>
+            <h2 class="fah-left" ><span id="leftTempf"></span>  ৹F</h2>
+        </div>
+        <div class="type-left">
+            <H4 id="typeLeft"></H4>
+        </div>
+        <div class="foot1-left">
+            <p>Today - <span id="date"></span> </p>
+        </div>
+        <div class="foot2-left">
+            <i class="fa-solid fa-location-dot"></i>
+            <p id="cityName"></p>
+        </div>
+    </div>
+
+    <!-- ==== LEFT 2====== -->
+
+    <div class="left-main2">
+        <div class="cross">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+        <div class="search-main2">
+            <input type="text" name="" id="inputForm" placeholder=" Search Location" >
+            <input  type="submit" class="submitBtn">
+        </div>
+
+        <div class="answers-main2"> 
+            
+        </div>
+    </div>
+
+    <!-- ==== RIGHT MAIN ====== -->
+    <div class="right-main">
+
+        <div class="wrapper">
+            <div class="head-right ">
+                <h6 class="cel ">৹C</h6>
+                <h6 class="fah">৹F</h6>
+            </div>
+    
+    
+            <div class="cards-right ">
+                <div class="card1 card">
+                    <h6 class="day" id="day1"></h6>
+                    <img class="mainImg2" id="1img"  alt="">
+                    <div class="foot-card">
+                        <p class="maxTemp" id="1max"></p>
+                        <p class="maxTempf" id="1maxf"></p>
+                        <p class="minTemp" id="1min"></p>
+                        <p class="minTempf" id="1minf"></p>
+                    </div>
+                </div>
+                <div class="card2 card">
+                    <h6 class="day" id="day2"></h6>
+                    <img class="mainImg2" id="2img" alt="">
+                    <div class="foot-card">
+                        <p class="maxTemp" id="2max"></p>
+                        <p class="maxTempf" id="2maxf"></p>
+                        <p class="minTemp" id="2min"></p>
+                        <p class="minTempf" id="2minf"></p>
+                    </div>
+                </div>
+                <div class="card3 card">
+                    <h6 class="day" id="day3"></h6>
+                    <img class="mainImg2" id="3img"  alt="">
+                    <div class="foot-card">
+                        <p class="maxTemp" id="3max"></p>
+                        <p class="maxTempf" id="3maxf"></p>
+                        <p class="minTemp" id="3min"></p>
+                        <p class="minTempf" id="3minf"></p>
+                    </div>
+                </div>
+                <div class="card4 card">
+                    <h6 class="day" id="day4"></h6>
+                    <img class="mainImg2" id="4img"  alt="">
+                    <div class="foot-card">
+                        <p class="maxTemp" id="4max" ></p>
+                        <p class="maxTempf" id="4maxf" ></p>
+                        <p class="minTemp" id="4min"></p>
+                        <p class="minTempf" id="4minf"></p>
+                    </div>
+                </div>
+                <div class="card5 card">
+                    <h6 class="day" id="day5"></h6>
+                    <img class="mainImg2" id="5img"  alt="">
+                    <div class="foot-card">
+                        <p class="maxTemp" id="5max"></p>
+                        <p class=" maxTempf" id="5maxf"></p>
+                        <p class="minTemp" id="5min"></p>
+                        <p class="minTempf" id="5minf"></p>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <div class="heading-right ">
+                <h2>Today's Highlights</h2>
+            </div>
+    
+            <div class="containers-right ">
+                
+    
+                <div class="top-cont">
+                    <div class="container1 cont">
+                        <h6 class="status">Wind status</h6>
+                        <h5 class="percent"><span id="windSpeed"></span>   mph</span></h5>
+                        <div class="foot-cont">
+                            <i class="fa-solid fa-location-arrow"></i>
+                            <p>WSW</p>
+                        </div>
+    
+                    </div>
+                    <div class="container2 cont">
+                        <h6 class="status">Humidity</h6>
+                        <h5 class="percent"><span id="humidity"></span> %</h5>
+                        <div class="units">
+                            <p>0</p>
+                            <p>50</p>
+                            <p>100</p>
+                        </div>
+                        <progress id="progBar" value="" max="100"></progress>
+                    </div>
+                </div>
+                <div class="bottom-cont">
+                    <div class="container3 con">
+                        <h6 class="visible">Visibility</h6>
+                        <h5 class="visibleValue"><span id="visibility"></span>miles</h5>
+                    </div>
+                    <div class="container4 con">
+    
+                        <h6 class="Ap">Air Pressure</h6>
+                        <h5 class="Apvalue"><span id="airPressure"></span>hPa</h5>
+    
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
+
+        
+
+    </div>
+
+    <!-- === SCRIPT==== -->
+
+    <script src="java.js"></script>
+
+    
+
+    
+
+</body>
+
+</html>
